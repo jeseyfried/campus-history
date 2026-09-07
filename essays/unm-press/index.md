@@ -24,7 +24,7 @@ The Press is New Mexico's sole major book publisher and handles various regional
   caption=""
 image-path="images/ULPhotoImag_3418_medium.jpg"
 %}
-> 1717 Roma Avenue NE in 1949, decorated as part of a sorority house decor competition.[^1949]
+>1717 Roma Avenue NE in 1949, decorated as part of a sorority house decor competition.[^1949]
 
 {% include images/figure.html
   class="img-center"
@@ -68,7 +68,7 @@ width="100%"
 caption=""
 image-path="images/Screenshot_2025-05-01_180119.png"
 %}
-The campus in December 1935. By this point, the two Korber/Press buildings had been conjoined and linked to the Carlisle Gym.[^ConjoinedtoCarlisle]
+>The campus in December 1935. By this point, the two Korber/Press buildings had been conjoined and linked to the Carlisle Gym.[^ConjoinedtoCarlisle]
 
 {% include images/figure.html
   class="img-center"
@@ -135,14 +135,6 @@ Afterwards, though, the Press was left in a relatively good position. In 1957, t
 ### 1717 Roma Expands
 The architect Louis G. Hesselden was brought on to design and build an addition to the Alpha Chi Omega sorority house in 1950, which included a new lounge, bathroom, laundry room, and a "town girl's room," as well as a few other renovations like an additional shower in the second floor bathroom.[^Hesselden] A door at the end of the upstairs hallway was also added to access the roof of the expansion, which was intended as a sun deck. The basement was left untouched, though the building foundation was updated to accommodate the new left side of the house. The lounge now serves as the Press's entrance room.
 
-{% include images/jumbotron.html
-  height="35.57"
-  image-path="images/Screenshot_20250516_150644~3.jpg"
-  title=""
-%}
-
->Hesselden's plans for the "Addition + Alteration" to the Alpha Chi Omega sorority house.[^Hesselden]
-
 {% include images/figure.html
 class="img-center"
 width="100%"
@@ -176,7 +168,7 @@ image-path="images/Screenshot_2025-05-19_224254.png"
 %}
 >The new Alpha Chi Omega Sorority House, as photographed in the 1967-1968 edition of UNM's _The Mirage_ yearbook.[^Mirage68] It has since been transformed into the ROTC Education Complex.
 
-So...what did UNM use their newly acquired building for? Well, it was first designated as the location for the offices of the Institute of Meteoritics.[^Lobo1966] 1717 Roma only housed them very briefly, though. The Institute was already in a period of relative inactivity after its director retired in 1962, and while they had a full-time researcher between 1966 and 1967, he left before long.[^Annual]
+So what did UNM use their newly acquired building for? Well, it was first designated as the location for the offices of the Institute of Meteoritics.[^Lobo1966] 1717 Roma only housed them very briefly, though. The Institute was already in a period of relative inactivity after its director retired in 1962, and while they had a full-time researcher between 1966 and 1967, he left before long.[^Annual]
 
 By the end of March 1967, the Office of International Programs and Services had taken up residence in 1717 Roma[^LoboMar1967], where it would remain well into the 1980s.[^Lobo1985] The office was established to handle foreign students at UNM and American nationals planning to go abroad.[^LoboMay1967]
 
@@ -209,7 +201,7 @@ Amidst the Press's immense success, 1717 Roma quietly shifted from housing the O
 
 In 1991, remodeling commenced at the Journalism Building, and it was only then that the press plant followed the editorial offices to 1700 Lomas Blvd NE. All the insurance claims made on flood-damaged books from the Mesa Vista Hall basement eventually proved handy in securing a dedicated warehouse for the Press, built in the early 1990s at 3700 Spirit Drive SE adjacent to Sunport runways, to house the entire inventory of the Press. The business department and order fulfillment department also moved into the warehouse, alongside part of the marketing department.
 
-In December 2004, demolition began on the Lomas location to build the UNM John & June Perovich Business Center, though parts of the original building were retained. While the Press continued to place a portion of its inventory in the back half of the Business Center for several years after the fact, its main offices were relocated to 1601 Randolph Road SE, right by where University Boulevard briefly terminates. However, plans were soon underway for a new home for the Press, which would again consolidate all its operations under a single roof. The warehouse on Spirit Drive was sold to help finance this new base of operations, constructed at 1312 Basehart Road SE. In the fall of 2007, the Press moved in...and was met with a rude awakening.
+In December 2004, demolition began on the Lomas location to build the UNM John & June Perovich Business Center, though parts of the original building were retained. While the Press continued to place a portion of its inventory in the back half of the Business Center for several years after the fact, its main offices were relocated to 1601 Randolph Road SE, right by where University Boulevard briefly terminates. However, plans were soon underway for a new home for the Press, which would again consolidate all its operations under a single roof. The warehouse on Spirit Drive was sold to help finance this new base of operations, constructed at 1312 Basehart Road SE. In the fall of 2007, the Press moved in—and was met with a rude awakening.
 
 {% include images/figure.html
 class="img-center"
@@ -221,7 +213,7 @@ image-path="images/Screenshot_20250516_153057.jpg"
 
 First, a flood took place. Then cracks began to form in the floors and walls, with one being nearly two feet deep. The building had been built in an unorthodox manner because a second story that could be rented out was hastily added to the construction plan, and so it ended up with bizarre support beams, including ones that ran diagonally and in front of windows. This, coupled with the construction workers not digging deep enough to properly ground the building, was the cause of it beginning to break apart. The strain of the unplanned additional floor was too much for it to bear. Newly added rods that drilled deep into the Basehart location's foundation were necessary to shore it up.
 
-Other issues plagued the Press at this time as well. They had been under the assumption that the Basehart building would be theirs, and invested money in it accordingly, but it turned out they were merely renting it from UNM, which caused some confusion and frustration. UNM Central Administration would ultimately relocate the Press to allocate the Basehart location's newly built offices to a biology research institute that had been awarded a multi-million-dollar, multi-year grant for an international project. They were threatening to move their program to another university, which drove UNM to find a way to keep them around. As for the Press...well, UNM told them they could move to 1717 Roma Ave NE, and said it'd make for a better arrangement because no rent payments would be necessary. That fall, the Press transferred over to 1717 Roma, though the warehouse remained at Basehart until 2017, when it was shuttered permanently. Fulfillment and distribution were then outsourced to Longleaf.
+Other issues plagued the Press at this time as well. They had been under the assumption that the Basehart building would be theirs, and invested money in it accordingly, but it turned out they were merely renting it from UNM, which caused some confusion and frustration. UNM Central Administration would ultimately relocate the Press to allocate the Basehart location's newly built offices to a biology research institute that had been awarded a multi-million-dollar, multi-year grant for an international project. They were threatening to move their program to another university, which drove UNM to find a way to keep them around. As for the Press, UNM told them they could move to 1717 Roma Ave NE, and said it'd make for a better arrangement because no rent payments would be necessary. That fall, the Press transferred over to 1717 Roma, though the warehouse remained at Basehart until 2017, when it was shuttered permanently. Fulfillment and distribution were then outsourced to Longleaf.
 
 ## Conclusion
 
