@@ -1,0 +1,46 @@
+{% comment %}
+  Essay page header — full-viewport header with image, title, subtitle, caption stripe, and prev/next nav.
+
+  Parameters:
+    image-path:   background image path (required)
+    title:        building/page title shown over the image
+    subtitle:     optional subtitle below the title
+    caption:      description of what the image shows — displayed in stripe at bottom
+    bg-position:  CSS background-position (default: center)
+    prev-url:     URL of previous essay (alphabetical); omit to hide left arrow
+    next-url:     URL of next essay (alphabetical); omit to hide right arrow
+    eyebrow:      small label above title (default: Campus History)
+    hide-content: hide title/subtitle/eyebrow overlay when true
+{% endcomment %}
+
+{% capture img_url %}{% include images/image-path.html image-path=include.image-path %}{% endcapture %}
+{% assign img_url = img_url | strip %}
+
+<div class="page-header page-header--hero{% if include.hide-content %} page-header--image-only{% endif %}">
+  <div class="page-header-bg"
+    style="background-image: url('{{ img_url }}'); background-position: {{ include.bg-position | default: 'center' }};"></div>
+  <div class="page-header-grid"></div>
+
+  {% if include.prev-url %}
+  <a href="{{ site.baseurl }}{{ include.prev-url }}" class="header-arrow header-arrow-left" aria-label="Previous essay">&#8592;</a>
+  {% endif %}
+  {% if include.next-url %}
+  <a href="{{ site.baseurl }}{{ include.next-url }}" class="header-arrow header-arrow-right" aria-label="Next essay">&#8594;</a>
+  {% endif %}
+
+  {% unless include.hide-content %}
+  <div class="page-header-content">
+    <div class="page-header-eyebrow">{{ include.eyebrow | default: "Campus History" }}</div>
+    {% if include.title %}
+    <h1>{{ include.title }}</h1>
+    {% endif %}
+    {% if include.subtitle %}
+    <p>{{ include.subtitle }}</p>
+    {% endif %}
+  </div>
+  {% endunless %}
+
+  {% if include.caption %}
+  <div class="page-header-caption">{{ include.caption }}</div>
+  {% endif %}
+</div>

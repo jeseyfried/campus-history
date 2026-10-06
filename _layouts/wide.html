@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include html/html-head.html %}
+
+<!-- UNM styles provide the institutional nav; Campus History CSS loads after them so page design wins. -->
+<link href="//webcore.unm.edu/v2/css/unm-styles.min.css" rel="stylesheet" />
+<link href="https://www.unm.edu/assets/css/site-styles.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="{{site.baseurl}}/assets/css/base.css" rel="stylesheet">
+<link href="{{site.baseurl}}/assets/css/typography.css" rel="stylesheet">
+<link href="{{site.baseurl}}/assets/css/page-header.css" rel="stylesheet">
+<link href="{{site.baseurl}}/assets/css/backgrounds.css" rel="stylesheet">
+{% if page.css %}
+<link href="{{site.baseurl}}/assets/css/{{ page.css }}" rel="stylesheet">
+{% endif %}
+<!-- UNM compat overrides — must load AFTER unm-styles so our rules win the cascade -->
+<link href="{{site.baseurl}}/assets/css/unm-compat.css" rel="stylesheet">
+
+<body>
+
+  {% include nav-unm.html %}
+
+  {% comment %}
+    Compute prev/next essay by alphabetical folder name.
+    Only applies to pages inside /essays/; other pages get no arrows.
+    Starter essays are templates, not reading material, so they are kept out
+    of the chain. Liquid has no negated `contains`, so this filters on the
+    category rather than the folder name.
+  {% endcomment %}
+  {% if page.url contains '/essays/' %}
+    {% assign all_essays = site.pages
+        | where_exp: "p", "p.url contains '/essays/'"
+        | where: "name", "index.md"
+        | where_exp: "p", "p.category != 'Starter Essay'"
+        | sort: "url" %}
+    {% assign prev_url = nil %}
+    {% assign prev_title = nil %}
+    {% assign next_url = nil %}
+    {% assign next_title = nil %}
+    {% for essay in all_essays %}
+      {% if essay.url == page.url %}
+        {% assign cur_idx = forloop.index0 %}
+        {% if cur_idx > 0 %}
+          {% assign prev_idx = cur_idx | minus: 1 %}
+          {% assign prev_url = all_essays[prev_idx].url %}
+          {% assign prev_title = all_essays[prev_idx].title %}
+        {% endif %}
+        {% unless forloop.last %}
+          {% assign next_idx = cur_idx | plus: 1 %}
+          {% assign next_url = all_essays[next_idx].url %}
+          {% assign next_title = all_essays[next_idx].title %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if page.header-image %}
+    {% assign image_title = page.image-title | default: page.header-title | default: page.title %}
+    {% include layout/page-header.html
+      image-path  = page.header-image
+      title       = image_title
+      subtitle    = page.header-subtitle
+      caption     = page.header-caption
+      bg-position  = page.header-position
+      eyebrow      = page.category
+      hide-content = page.hide-header-content
+      prev-url     = prev_url
+      next-url     = next_url
+    %}
+  {% endif %}
+
+  <div class="page-wrap page-wrap--wide">
+    <div class="container">
+      {{ content }}
+      {% include nav/essay-pagination.html
+        prev-url   = prev_url
+        prev-title = prev_title
+        next-url   = next_url
+        next-title = next_title
+      %}
+    </div>
+  </div>
+
+  {% include footer-unm.html %}
+
+  {% include html/html-js.html %}
+
+</body>
+</html>

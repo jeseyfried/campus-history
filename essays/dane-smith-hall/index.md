@@ -1,42 +1,78 @@
 ---
 title: Dane Smith Hall
 author: Jacob Brown
-layout: unm-base
+layout: essay
 date: 2019-04-10
+header-image: images/dane-smith-modern.jpg
+popup-teaser: View the history of one of the most widely used buildings on campus.
+card-description: Opened in 1999, it is the University of New Mexico's seconds all-classroom facility where most undergraduates spend much of thier time their first two years.
+card-image: /essays/dane-smith-hall/images/dane-smith-modern.jpg
+type: classrooms
+start: 1999
+header-position: center 70%
+header-height: 80vh
+header-title: Dane Smith Hall
+header-caption: "Opening in 1998, DSH replaced several professors' houses, including Dane Smith."
+category: Classroom Building
 ---
 
+Dane Smith Hall is an 89,000-square-foot multipurpose classroom building located in the center of the University of New Mexico campus. Built to address the university’s growing demand for classroom space, it was the first general education classroom building constructed at UNM since 1950. Its construction reflected a major shift in the university’s priorities during the late twentieth century, when UNM was attempting to modernize its facilities and compete with other large public universities in the Southwest.
+{: .lead}
 
-# Dane Smith Hall
-
-{% include figure.html class="img-center" width="95%" caption="A modern view of Dane Smith Hall" src="images/dane.jpg" %}
 
 ## Background
-Dane Smith Hall is a 89,000-square-foot, multipurpose classroom building built in the heart of campus to meet the university's rapidly growing demand for general education meeting rooms. It was the first general education classroom built at UNM since 1950, making the need for this building necessary at its time of construction. Dane Smith Hall was the first building built under the new campus Master Plan, an effort still alive today to keep the University of New Mexico modern and competative with other major universities. It was built with an outdoor amphitheater decorated with native plants from the area. The interior contains a three story, open atrium that serves as a student common area with a cafe, copy center, and open seating throughout.
+According to _Miracle on the Mesa_, the university during the 1990s was under increasing pressure to expand enrollment, improve student services, and update aging infrastructure while still maintaining its identity as New Mexico’s flagship university.
 
-## Usage
-Dane Smith Hall has a seating capacity of about 2,000 students across all classrooms. The building contains sixteen large classrooms containing 56 seats, thirteen smaller classrooms seating 25, three computer classrooms, two containing 25 seats and one containing 40, four television classrooms containing 40 seats, two small lecture halls seating 100 each, and one large lecture class with 162 seats. Each of these classrooms are equipped with projectors. televisions, and campus network connections in order to create a state of the art building that UNM desperately needed at the time. Dane Smith Hall hosts all types of classes including mathematics, political science, signed language, to name a few. A majority of undergarduates attending UNM will take at least one core class at Dane Smith Hall.
+Dane Smith Hall was also the first building constructed under UNM’s updated campus Master Plan, which aimed to create a more connected and pedestrian-friendly campus. The building was designed with a large outdoor amphitheater and landscaping that incorporated native Southwestern plants, continuing UNM’s long tradition of emphasizing regional architectural identity. Since the early twentieth century, UNM has used Pueblo Revival architecture and Southwestern aesthetics to distinguish itself from other American universities. Although Dane Smith Hall is more modern in style than many older campus buildings, it still reflects the university’s attempt to balance modernization with regional tradition.
+
+Inside the building is a three-story open atrium that functions as a student common area. The atrium includes study areas, open seating, a café, and a copy center, reflecting broader changes in higher education during the late twentieth century. Universities increasingly emphasized not only classroom instruction, but also student gathering spaces intended to improve campus life and retention.
+
+
+
+## Spatial History
+
+Before Dane Smith Hall was built, the area was home to a small residential neighborhood occupied by several UNM professors and faculty members. The neighborhood represented an earlier stage in the university’s development, when the campus was smaller and more closely connected to surrounding residential areas.
+
+ {% include images/figure.html class="img-center" width="100%" caption="Birds-eye view of the current layout of Dane Smith Hall on top of the original neighborhood that was replaced for the facility." image-path="images/DSHLayout.jpg" %}
+
+
+Dane Farnsworth Smith, the building’s namesake, lived in one of the homes on Roma Avenue with his wife. Several other professors from this neighborhood later had campus buildings named after them, including Coach Johnson (Johnson Gym), Professor Clark (Clark Hall), and Stuart Northrop (Northrop Hall). The removal of the neighborhood to make way for Dane Smith Hall symbolizes the transformation of UNM throughout the twentieth century from a relatively small regional institution into a large modern university.
+
+{% include images/figure.html class="img-center" width="100%" caption="Professor Dane Smith's house on Roma Ave. It was one of many houses that were demolished and replaced with Dane Smith Hall" image-path="images/DSHHouse.jpg" %}
+
+
+
+This change also reflects a broader pattern discussed in *Miracle on the Mesa*: the constant expansion and reinvention of UNM in response to changing educational demands. As enrollment increased and the university pursued modernization, older spaces connected to earlier campus life were often replaced with larger and more efficient facilities. Dane Smith Hall therefore represents not only a classroom building, but also a physical example of how UNM’s history involves continuous negotiation between preserving tradition and adapting to growth.
+
+
 
 ## Construction
 
-<div class="carousel">
-  <div><img src="{{ site.baseurl }}/essays/dane-smith-hall/images/DSHConstruction.jpg"/></div>
-  <div><img src="{{ site.baseurl }}/essays/dane-smith-hall/images/DSHConstruction2.jpg"/></div>
-</div>
+Plans for Dane Smith Hall began in 1996, when the UNM Board of Regents voted to construct a new classroom building to meet increasing enrollment demands. Construction was delayed several times because of disagreements over costs and the relocation of residents living on the land where the building would eventually stand. Construction officially began on March 1, 1997, and the building opened for use in the fall semester of 1998.
+
+{% assign images = "images/DSHConstruction.jpg, images/DSHConstruction2.jpg" | split: ', ' %}
+{% include images/carousel.html images=images %}
+
+The completion of Dane Smith Hall also reshaped the physical landscape of campus. Roma Avenue, which had previously extended through the area, was removed and replaced with the roundabout at the end of Yale Boulevard. This redesign reflected the goals of the new campus Master Plan, which attempted to reduce traffic through the center of campus and create a more unified university environment.
+
+The building’s construction occurred during a period when many universities across the United States were investing heavily in campus infrastructure in order to remain competitive. UNM’s leadership believed that updated classroom facilities would help attract and retain students while strengthening the university’s reputation as a modern research institution.
 
 
-Initial plans for Dane Smith Hall began in 1996, when the board of regents at UNM voted to begin building a new multipurpose classroom to help compensate the large volume of students attending the university. Construction was delayed multiple times due to arguments over the cost of the new building and relocations of the patrons living on the land that hosted Dane Smith before it came to be. Initial construction of the building began a year later on March 1, 1997. The building was finished and ready for use by the fall semester of 1998.  When Dane Smith Hall was completed, Roma Avenue was demolished, no longer going through to Yale Boulevard. This connection was replaced with the large round-a-bout at the end of Yale that is now a staple of campus, being used constantly throughout the year. 
+## Usage
 
-## Spatial History
- {% include figure.html class="img-right" width="55%" caption="Birds-eye view of the current layout of Dane Smith Hall on top of the original neighborhood that was replaced for the facility." src="images/DSHLayout.jpg" %}
- 
-Before becoming home to one of the most widely used buildings on campus, the land hosting Dane Smith Hall was home to a small neighborhood. Within this neighborhood lived various professors at UNM. Dane Farnsworth Smith, the namesake of Dane Smith Hall, lived in a small house with his wife in this neighborhood. He is one of many professors from this small neighborhood to have a building on campus named after him. These professors include Coach Johnson (Johnson Gym), Professor Clark (Clark hall), and Stuart Northrop (Northrop Hall).  
+Dane Smith Hall has a seating capacity of approximately 2,000 students across its classrooms and lecture halls. The building contains sixteen large classrooms seating 56 students each, thirteen smaller classrooms seating 25 students, three computer classrooms, four television classrooms, two small lecture halls seating 100 students, and one larger lecture hall seating 162. The classrooms were equipped with projectors, televisions, and campus network connections, making the building technologically advanced for its time.
 
-{% include figure.html class="img-left" width="35%" caption="Professor Dane Smith's house on Roma Ave. It was one of many houses that were demolished and replaced with Dane Smith Hall" src="images/DSHHouse.jpg" %}
+The building hosts a wide variety of courses, including mathematics, political science, and signed language classes. Because it primarily serves general education courses, most undergraduate students at UNM will attend at least one class in Dane Smith Hall during their college careers.
+
+In many ways, the building represents the increasing scale of higher education at the end of the twentieth century. Earlier periods of UNM history described in *Miracle on the Mesa* focused on a smaller university with close ties to local communities and relatively small enrollments. By the 1990s, however, UNM had become a much larger institution serving thousands of students from across New Mexico and beyond. Buildings like Dane Smith Hall were part of the university’s effort to adapt to mass higher education and the growing expectation that public universities provide both access and modern facilities.
+
+{% include images/figure.html class="img-center" width="100%" caption="A modern view of Dane Smith Hall" image-path="images/dane.jpg" %}
 
 
-## Bibliography
 
-- Hooker, Van Dorn, Melissa Howard, and V. B Price. Only in New Mexico: An Architectural History of the University of New Mexico: The First Century, 1889-1989. Albuquerque, NM: University of New Mexico Press, 2000.
-
+{% capture bibliography %}
+- Only in New Mexico: An Architectural History of the University of New Mexico: The First Century, 1889-1989. Albuquerque, NM: University of New Mexico Press, 2000.
+- Miracle on the Mesa.
 - University of New Mexico. Dept. of Facility Planning Records, 1889-, Collection UNMA 028, Box 96. Center for Southwest Research, University Libraries, University of New Mexico.
-
+{% endcapture %}
+{% include typography/bibliography.html title="Bibliography" content=bibliography %}

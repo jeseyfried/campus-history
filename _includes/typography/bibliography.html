@@ -1,0 +1,20 @@
+{% comment %}
+  Collapsible bibliography/source drawer.
+
+  Parameters:
+    content: captured Markdown source list
+    title:   visible summary label (default: Sources)
+    open:    set to true to render expanded by default
+{% endcomment %}
+
+{% assign bibliography_title = include.title | default: 'Sources' %}
+
+<details class="bibliography-block"{% if include.open %} open{% endif %}>
+  <summary>
+    <span class="bibliography-block__title">{{ bibliography_title }}</span>
+    <span class="bibliography-block__eyebrow">Reference Drawer</span>
+  </summary>
+  <div class="bibliography-block__content">
+    {{ include.content | markdownify }}
+  </div>
+</details>

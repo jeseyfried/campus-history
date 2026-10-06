@@ -1,0 +1,31 @@
+{% comment %}
+  Essay pagination — previous/next navigation shown after essay content.
+
+  Parameters:
+    prev-url:   URL of previous essay
+    prev-title: title of previous essay
+    next-url:   URL of next essay
+    next-title: title of next essay
+{% endcomment %}
+
+{% if include.prev-url or include.next-url %}
+<nav class="essay-pagination" aria-label="Essay navigation">
+  {% if include.prev-url %}
+  <a class="essay-pagination__item essay-pagination__item--prev" href="{{ site.baseurl }}{{ include.prev-url }}">
+    <span class="essay-pagination__label">Previous Essay</span>
+    <span class="essay-pagination__title">&larr; {{ include.prev-title | default: "Previous" }}</span>
+  </a>
+  {% else %}
+  <span class="essay-pagination__item essay-pagination__item--empty" aria-hidden="true"></span>
+  {% endif %}
+
+  {% if include.next-url %}
+  <a class="essay-pagination__item essay-pagination__item--next" href="{{ site.baseurl }}{{ include.next-url }}">
+    <span class="essay-pagination__label">Next Essay</span>
+    <span class="essay-pagination__title">{{ include.next-title | default: "Next" }} &rarr;</span>
+  </a>
+  {% else %}
+  <span class="essay-pagination__item essay-pagination__item--empty" aria-hidden="true"></span>
+  {% endif %}
+</nav>
+{% endif %}

@@ -1,15 +1,13 @@
 ---
 title: UNM Campus Histories
-layout: directory
+layout: wide
 date: 2024-04-13
-subtitle: Pick a place...any place.
 ---
 
-# Directory of Essays
+# Browse Essays
 
-<!--Sheetrock expects to be outputting HTML for each row, so here's a place to put it.-->
-<div id="sheetrock">page loading...</div>
+{% assign essays = site.pages | where_exp: "page", "page.path contains 'essays/'" | sort: "title" %}
 
-<div id="cards" class="row"></div>
-    
-
+{% include nav/category-directory.html
+essays = essays
+%}

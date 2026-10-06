@@ -1,0 +1,143 @@
+/* =============================================================
+   Bootstrap 5 / UNM Bootstrap 3 compatibility shims
+   ============================================================= */
+
+
+/* =====================================================
+   NAVBAR-UNM (red bar)
+
+   Bootstrap 5 makes .navbar { display:flex; padding:0.5rem 0 } which breaks
+   the Bootstrap 3 float-based layout. Restore block display and strip padding
+   so the bar matches unm.edu's native height.
+   ===================================================== */
+
+.navbar-unm {
+  display: block !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* webcore sets the brand as a 70px UNM logo image (position:absolute,
+   background-image, text-indent:-999px). Don't touch height or padding —
+   just block Bootstrap 5's display:flex so the absolute logo renders as a block. */
+.navbar-unm .navbar-brand {
+  display: block !important;
+}
+
+/* Bootstrap 5 makes .navbar-nav { display:flex; flex-direction:column }.
+   Inside .navbar-unm we need plain block so .navbar-right float:right works. */
+.navbar-unm .navbar-nav {
+  display: block !important;
+}
+
+/* Ensure the navbar container clears floats (Bootstrap 5 may make it flex). */
+.navbar-unm > .container {
+  display: block !important;
+}
+
+/* typography.css sets a { border-bottom: 1px dotted } globally.
+   Strip it from all navbar links. */
+.navbar a,
+.navbar a:visited,
+.navbar a:hover {
+  border-bottom: none !important;
+}
+
+
+/* =====================================================
+   #HEADER (department nav bar)
+
+   site-styles.css sets #header { position:absolute; top:32px } — designed for
+   UNM sites where the header overlays a hero carousel. We have no carousel, so
+   put it in normal document flow.
+   ===================================================== */
+
+#header {
+  position: static !important;
+  top: auto !important;
+  min-height: 40px !important; /* logo is 70px tall; red bar is ~30px; logo needs 40px of #header */
+}
+
+
+/* =====================================================
+   #TOP-NAV (campus history site links)
+
+   Bootstrap 5 sets .collapse { display:none }; force it visible.
+   Bootstrap 5 makes .navbar-nav a flex column and removes .navbar-right float;
+   override to get a horizontal right-aligned row matching unm.edu's #top-nav.
+   Link colors: white on the dark rgba(51,51,51,.8) #header background.
+   ===================================================== */
+
+#top-nav.collapse {
+  display: block !important;
+}
+
+#header > .container {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  min-height: inherit !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+#header .navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#header .navbar-nav > li > a,
+#header .navbar-nav > li > a:visited {
+  display: block !important;
+  padding: 7px 15px !important;
+  color: #fff !important;
+  font-size: 1em !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+#header .navbar-nav > li > a:hover,
+#header .navbar-nav > li > a:focus {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+
+/* =====================================================
+   ROOT FONT SIZE
+
+   unm-styles.min.css sets html { font-size: 10px } which breaks all rem-based
+   sizing in our CSS. Restore the browser default.
+   ===================================================== */
+
+html {
+  font-size: 16px !important;
+}
+
+
+/* =====================================================
+   FIGCAPTION
+
+   unm-styles.min.css sets figcaption { display:table-caption } which breaks
+   layout. Restore display:block.
+   ===================================================== */
+
+figcaption,
+.page-wrap figcaption {
+  display: block !important;
+  color: #888;
+  line-height: 1.4;
+  margin: 0;
+  clear: both;
+}
+
+figcaption p,
+.page-wrap figcaption p {
+  display: block !important;
+  margin: 0;
+}

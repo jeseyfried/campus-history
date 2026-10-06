@@ -1,24 +1,28 @@
 ---
-title: University-Police
+title: University Police
 author: Luke Betzner
-layout: unm-base
-date: 2025-24-4
-header-image: images/1970-UNM-vs-BYU-Game.jpg
+layout: essay
+date: 2025-04-24
+card-description: This overview is a bandaid holding together a sparse, truncated, and incomplete history of UNMPD. Who will take on the rewarding challenge of adding to it?
+card-image: /essays/university-police/images/1970-UNM-vs-BYU-Game.jpg
+popup-teaser: Do you like to find and fill archival gaps?
 header-title: University Police
-header-height: 50vh
-background-position: 20px
+header-image: images/1970-UNM-vs-BYU-Game.jpg
+header-position: 0px
+category: Campus Services
 ---
 
+ As with the many other essays to be found on this site, the idea for this page began with a question; namely, what can be known of the history of UNM's Police Department? 
 
 ## A Tale of Two Boxes
 
-{% include figure.html class="img-left" width="48%" caption="The two boxes of archival resource UNMA 171. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" src="images/unm-cswr-two-boxes.jpg" %}
+{% include images/figure.html class="img-center" width="100%" caption="The two boxes of archival resource UNMA 171. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" image-path="images/unm-cswr-two-boxes.jpg" %}
 
- As with the many other essays to be found on this site, the idea for this page began with a question; namely, what can be known of the history of UNM's Police Department? Since the University of New Mexico was founded 1889, initially, I assumed that out of the massive numbers of records that must have surely been compiled since that time, that I would have the option to interact with a significant amount of archival material. I was eager to begin going about determining a proper historiographical method of selecting the necessary sources from which to craft my narrative. 
+Since the University of New Mexico was founded 1889, initially, I assumed that out of the massive numbers of records that must have surely been compiled since that time, that I would have the option to interact with a significant amount of archival material. I was eager to begin going about determining a proper historiographical method of selecting the necessary sources from which to craft my narrative. 
  
  Imagine my surprise when after making my initial request of the excellent archivists that staff the CSWR to have just two boxes set in front of me. I asked whether or not they had more boxes and just did not bring them. Upon asking that, I was told that these two boxes were all there was. I again asked to clarify whether the archivist was saying whether or not there were only two boxes in the collection UNMA 171 or whether there were only two boxes that contained the entire history of the University Police Department. The archivist confirmed the latter. After she returned to her desk, I sat there dumfounded, staring at the two boxes in front of me. This was not at all what I was expecting. As I opened the boxes, my consternation only grew. What follows is the information I was able to discover regarding the nearly undocumented history of the UNM Police Department. But first, a clarifying note.
 
-{% include figure.html class="img-right" width="48%" caption="Box 1 of unma 171 with its eight folders. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" src="images/unma-171-box-1-open-with-folders.jpg" %}
+{% include images/figure.html class="img-center" width="100%" caption="Box 1 of unma 171 with its eight folders. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" image-path="images/unma-171-box-1-open-with-folders.jpg" %}
 
  A police department is something separate from the things that they do. It is a group of persons voluntarily bound together by an ideal and mission. They do things, but simply because they do things, does not mean that one can truly know the history of the department itself simply by looking at the many things in which they have been involved. That constitutes more the history of their presence in the community rather than a history of the department itself. So what do I mean then when I ask, what is the history of the UNM Police Department? I intend to pursue questions such as 'When was the department created?', 'Who was the first officer to lead the department?', 'Where was the department housed on UNM campus?', 'What was the daily life of officers like and how has that changed over time?' and other such questions. In so brief a space, I cannot possibly properly treat the breadth and depth of this subject with even a rigorous overview. Rather it is my hope and intention in both seeking this information out myself, as well as creating some visibility around a clear opportunity to create a more robust archival presence for the UNMPD, that other students will take upon themselves the same mantle of discovery regarding the history of this essential department of UNM.
 
@@ -31,11 +35,11 @@ background-position: 20px
 The oldest document in the archive is a photocopy of a document from Nov 17, 1922, addressed to Celso Espinosa- The last document referencing him in the file is dated in April 17, 1926. From this one might understand that his tenure in the position of Nightwatchman spanned at least 4 years.
 All that exists within the archive that corroborates the existence of the police department at UNM is a letter from Seargent Lee Forrester to a Mr. Earl Bowdich, Superintendent. This letter was typed on a typewriter and is dated July 14th, 1947. At this time, based on the content of the document, the UNM Police department was already in existence. However, there is nothing in the folder itself that bridges the gap between the 1926 Nightwatchman and the New Police Force referred to in 1947. Somewhere between that time the Police department was created and staffed. 
 
-{% include figure.html
+{% include images/figure.html
   class="img-center"
   width="100%"
   caption="Article in the Daily Lobo, shortly after the founding and staffing of the UNMPD."
-  src="images/1947-announcement-police-force-unm.png" %}
+image-path="images/1947-announcement-police-force-unm.png" %}
 
 
 
@@ -71,7 +75,7 @@ After looking at the brief news blurb in the Daily Lobo, I began trying to hunt 
 
 Where the Police department went following this was a mystery until I spoke to a former head of the security department, by the name of Rosemary Melendrez. She had worked in the department from 1995-2020. She is directly responsible for a large unprocessed 3rd box of materials not included in the UNMA 171 collection. She expended significant effort on tracking changes and activities in the department. Her efforts are the only thing that even begins to approach an archival presence, but it has not been incorporated into the archive yet. This box only came to light due to the expertise of the CSRW head of archives Portia Vescio.
 
-{% include figure.html class="img-left" width="48%" caption= "An unprocessed mystery box. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" src="images/unprocessed-box-with-binders-rosemary.jpg" %}
+{% include images/figure.html class="img-center" width="100%" caption= "An unprocessed mystery box. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" image-path="images/unprocessed-box-with-binders-rosemary.jpg" %}
 
 
 
@@ -86,24 +90,14 @@ In conclusion, and it seems, at long last, there is something unique happening i
 
 [^note6]: Source- https://news.unm.edu/news/purpose-built-unm-police-headquarters-construction-set-for-april
 
-{% include jumbotron.html
+{% include images/jumbotron.html
   height="100"
-  image-url="images/future-unmpd-hq-april-2025.png"
+  image-path="images/future-unmpd-hq-april-2025.png"
   title="Future HQ of UNMPD"
 %}
 
 
-The clip contains a fanciful conversation between myself and a personified archive that somewhat humorously albeit briefly seeks to encapsulate the readjustment of my research expectations.
-<audio controls src="interview-with-the-csrw-archive.mp3"></audio>
-
-This portion of the webpage contains a 3d rendered image of a pinecone from the landscape of the existing Hokona-Zuni Hall complex, tying the image to the narrative while adding an aspect of visual/tangible interaction.
-
-<div class="sketchfab-embed-wrapper"> <iframe title="Archive" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3770ef844703473291fa6466e3ee723a/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/archive-3770ef844703473291fa6466e3ee723a?utm_medium=embed&utm_campaign=share-popup&utm_content=3770ef844703473291fa6466e3ee723a" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Archive </a> by <a href="https://sketchfab.com/RevoltingPeasant?utm_medium=embed&utm_campaign=share-popup&utm_content=3770ef844703473291fa6466e3ee723a" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> RevoltingPeasant </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3770ef844703473291fa6466e3ee723a" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-
-
-
-
-## Bibliography
+{% capture bibliography %}
 - Pete Guevara,-current police lieutenant- in conversation with the author, in Hokona-Zuni Hall Basement, late April 2025.
 - Rosemary Melendrez, -former police security admin- telephone conversation with the author, Wednesday, May 1st @ 12:30 P.M.
 - Mike McGinnes, -former police detective- telephone conversation with the author, Tuesday, May 6th, 2025 @ 8:30 A.M.
@@ -113,3 +107,6 @@ This portion of the webpage contains a 3d rendered image of a pinecone from the 
 - University of New Mexico Hodgin and Rodey Halls Albuquerque, NM, 1952, Job Number 375-G-1, Stack: 1, Drawer: 20. John Gaw Meem Drawings and Plans, SWA JGM Drawings CSWR Microfilm NA737 M438 J64. UNM Center for Southwest Research & Special Collections.
 - https://en.wikipedia.org/wiki/List_of_presidents_of_the_University_of_New_Mexico
 - https://nmarchives.unm.edu/repositories/22/archival_objects/325077
+{% endcapture %}
+
+{% include typography/bibliography.html title="Bibliography" content=bibliography %}

@@ -1,0 +1,36 @@
+# Homepage curation.
+#
+# Entries are essay FOLDER names (essays/<folder>/), not titles. Matching is
+# case-insensitive, so `university-police` finds `essays/University-Police/`.
+#
+# Curation lives here rather than in essay front matter so that the order below
+# is the order on the page, and so students copying a starter essay cannot put
+# themselves on the homepage.
+#
+# An essay listed here still needs card-description and card-image in its front
+# matter to render a card. Anything listed but missing those is skipped rather
+# than rendered broken.
+
+# Random rotation in the "Featured Essay" block. First entry is also the
+# server-rendered default, i.e. what shows before JavaScript picks one and what
+# a reader with JavaScript disabled sees.
+featured:
+  - hodgin-hall
+  - duck-pond
+  - maxwell-museum
+  - unm-press
+  - humanities-building
+  - laguna-devargas-hall
+  - lobo-statues
+  - womens-resource-center
+
+# "Recommended Essays" list, rendered top to bottom in this order.
+recommended:
+  - humanities-building
+  - dane-smith-hall
+  - laguna-devargas-hall
+  - duck-pond
+  - maxwell-museum
+  - unm-press
+  - lobo-statues
+  - womens-resource-center

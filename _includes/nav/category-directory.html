@@ -1,0 +1,63 @@
+{% assign essays = include.essays | sort: "title" %}
+{% assign categories = include.categories | default: "Academic Building|Arts Venue|Campus Services|Classroom Building|Dining|Dormitory|Historic Building|Landscape|Museum|Office|Public Art|Student Resource" | split: "|" %}
+
+<div class="directory-tools">
+  <span>Find an essay:</span>
+  <strong>By Category</strong>
+  <a href="{{ '/all-essays/' | relative_url }}">By Name</a>
+</div>
+
+<section class="category-browser" aria-labelledby="browse-by-category">
+  <h2 id="browse-by-category">Browse by Category</h2>
+  <div class="category-card-grid">
+    {% for category in categories %}
+      {% assign category_essays = essays | where: "category", category %}
+      {% if category_essays.size > 0 %}
+        {% assign category_slug = category | slugify %}
+        {% assign lead_essay = category_essays | first %}
+        <a class="category-card" href="#{{ category_slug }}">
+          {% if lead_essay.card-image %}
+          <img src="{% include images/image-path.html image-path=lead_essay.card-image %}" alt="">
+          {% endif %}
+          <span class="category-card__body">
+            <span class="category-card__count">{{ category_essays.size }} {% if category_essays.size == 1 %}Essay{% else %}Essays{% endif %}</span>
+            <span class="category-card__title">{{ category }}</span>
+          </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="essay-category-sections" aria-label="Essays grouped by category">
+  {% for category in categories %}
+    {% assign category_essays = essays | where: "category", category %}
+    {% if category_essays.size > 0 %}
+      {% assign category_slug = category | slugify %}
+      <section class="essay-category-section" id="{{ category_slug }}">
+        <div class="essay-category-section__header">
+          <h2>{{ category }}</h2>
+          <span>{{ category_essays.size }} {% if category_essays.size == 1 %}Essay{% else %}Essays{% endif %}</span>
+        </div>
+
+        <div class="essay-card-grid">
+          {% for card in category_essays %}
+            {% if card.title and card.card-description %}
+            <article class="card v-card">
+              <a href="{{ card.url | relative_url }}">
+                {% if card.card-image %}
+                <img src="{% include images/image-path.html image-path=card.card-image %}" class="card-img-top" alt="">
+                {% endif %}
+                <div class="card-body">
+                  <h3 class="card-title">{{ card.title }}</h3>
+                  <p class="card-text">{{ card.card-description }}</p>
+                </div>
+              </a>
+            </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</section>

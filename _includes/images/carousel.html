@@ -1,0 +1,72 @@
+{% comment %}
+  Carousel — image slideshow using Splide
+  Parameters:
+    images:   list of image paths (required)
+    headers:  list of slide titles (optional)
+    captions: list of slide captions (optional; split on | to allow commas in text)
+    width:    CSS width (default: 100%)
+    class:    left | center | right — alignment (default: center)
+    id:       unique ID if you have multiple carousels on one page
+{% endcomment %}
+
+{% assign carousel_fingerprint = include.images | join: '-' | slugify %}
+{% if include.id %}
+  {% assign carousel_id = include.id %}
+{% else %}
+  {% assign carousel_id = carousel_fingerprint | prepend: 'splide-carousel-' %}
+{% endif %}
+{% assign carousel_class = include.class | default: 'center' %}
+
+<div id="{{ carousel_id }}" class="splide xanthan-carousel xanthan-carousel--{{ carousel_class }}"
+  style="width: {{ include.width | default: '100%' }}; margin: 0 auto var(--spacing-lg);">
+  <div class="splide__track">
+    <ul class="splide__list">
+      {% for image in include.images %}
+      {% capture img_url %}{% include images/image-path.html image-path=image %}{% endcapture %}
+      {% assign idx = forloop.index | minus: 1 %}
+      {% assign slide_header = include.headers[idx] | default: '' | strip %}
+      {% assign slide_caption = include.captions[idx] | default: '' | strip %}
+      <li class="splide__slide">
+        <figure class="xanthan-carousel__slide">
+          <img src="{{ img_url | strip }}" alt="{{ slide_header }}">
+          {% if slide_header != '' or slide_caption != '' %}
+          <figcaption>
+            {% if slide_header != '' %}<strong>{{ slide_header }}</strong> {% endif %}
+            {% if slide_caption != '' %}{{ slide_caption }}{% endif %}
+          </figcaption>
+          {% endif %}
+        </figure>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+(function() {
+  function mountCarousel() {
+    var el = document.getElementById('{{ carousel_id }}');
+    if (!el || el.dataset.splideMounted === 'true') return;
+    if (typeof Splide === 'undefined') {
+      window.setTimeout(mountCarousel, 100);
+      return;
+    }
+    new Splide(el, {
+      type: 'loop',
+      autoplay: true,
+      interval: 20000,
+      pauseOnHover: true,
+      arrows: true,
+      pagination: true,
+      fixedHeight: '420px',
+    }).mount();
+    el.dataset.splideMounted = 'true';
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountCarousel);
+  } else {
+    mountCarousel();
+  }
+})();
+</script>

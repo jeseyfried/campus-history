@@ -1,0 +1,29 @@
+{%- comment -%}
+  Resolves an image path to a site URL.
+
+  Whitespace control is deliberate: several callers drop this include straight
+  into an img src attribute without piping the result through strip, so this
+  file must emit the URL and nothing else. Do not add unguarded newlines.
+
+  Note: Liquid still tokenises tags inside a comment block, so never write a
+  literal include tag in here as an example. It gets parsed for real.
+
+  Parameters:
+    image-path: '/rooted/path', 'http(s)://...', or a path relative to the page (required)
+    page-dir:   override the directory that relative paths resolve against (optional)
+{%- endcomment -%}
+{%- if include.image-path -%}
+  {%- assign image_path = include.image-path | strip -%}
+  {%- assign first_char = image_path | slice: 0, 1 -%}
+  {%- if first_char == '/' -%}
+    {{- site.baseurl }}{{ image_path -}}
+  {%- elsif image_path contains 'http' -%}
+    {{- image_path -}}
+  {%- else -%}
+    {%- if include.page-dir -%}
+      {{- site.baseurl }}{{ include.page-dir }}{{ image_path -}}
+    {%- else -%}
+      {{- site.baseurl }}{{ page.dir }}{{ image_path -}}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}

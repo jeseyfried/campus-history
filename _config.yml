@@ -1,13 +1,11 @@
-defaults:
-  -
-    scope:
-      path: "sites"
-    values:
-      layout: "single-col"
+title: Campus Histories
+description: Essays on the history of the University of New Mexico campus
+url: ""
+baseurl:
 
-
-port: 4001
-
-baseurl: /campus-history/
+# Pages build as directories with an index.html (/directory/ rather than
+# /directory.html) so that trailing-slash links work on any static server,
+# and so top-level pages match the essay URLs.
+permalink: pretty
 
 essay-images: /essays/images

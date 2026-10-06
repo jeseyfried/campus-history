@@ -1,0 +1,301 @@
+/*****************************************************
+PAGE HEADER — campus-history
+Full-viewport hero header with photo image, title/subtitle,
+caption stripe, and prev/next essay navigation arrows.
+
+Based on xanthan page-header.css; filters removed since
+campus-history uses photographs at full fidelity.
+*****************************************************/
+
+
+/* =====================================================
+   COLOR VARIABLES
+   ===================================================== */
+
+.page-header {
+  --header-bg: #120f0d;
+  --header-grid-line: rgba(255, 250, 240, 1);
+  --header-subtitle: rgba(255, 250, 240, 0.86);
+  /* UNM chrome height from active style definitions: .navbar-unm 40px + #header 44px. */
+  --unm-header-offset: 84px;
+}
+
+
+/* =====================================================
+   BASE STRUCTURE
+   ===================================================== */
+
+/* Bootstrap 3 (UNM webcore) has .page-header { margin: 44px 0 22px; border-bottom }
+   which loads after us and would add a 22px gap below and 44px above the hero.
+   Override it explicitly. */
+.page-header {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--unm-header-offset));
+  min-height: 34rem;
+  overflow: hidden;
+  background: var(--header-bg);
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+/* Photo image layer */
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  /* No filter — campus-history displays photos as-is, slightly darkened */
+  filter: brightness(0.66) saturate(1.08) contrast(1.04);
+  opacity: 1;
+}
+
+/* Subtle grid overlay for visual texture */
+.page-header-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.055;
+  background-image:
+    linear-gradient(var(--header-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--header-grid-line) 1px, transparent 1px);
+  background-size: 4.75rem 4.75rem;
+}
+
+.page-header--hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background:
+    linear-gradient(105deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.32) 42%, rgba(0, 0, 0, 0.08) 70%),
+    radial-gradient(circle at 85% 18%, rgba(255, 198, 0, 0.24), transparent 24rem);
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+.page-header h1 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.98rem, 5.76vw, 5.4rem);
+  font-weight: 700;
+  color: #fffaf0;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.page-header p {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  color: var(--header-subtitle);
+  line-height: 1.45;
+  font-weight: 400;
+  margin-bottom: 0;
+  max-width: 560px;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.8),
+    0 0 28px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================================
+   HERO TIER
+   ===================================================== */
+
+.page-header--hero {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12vh;
+}
+
+.page-header--image-only {
+  height: clamp(26rem, 68vh, 44rem);
+  min-height: 26rem;
+  padding-bottom: 0;
+}
+
+.page-header--image-only .page-header-bg {
+  filter: brightness(0.82) saturate(1.04) contrast(1.02);
+}
+
+.page-header--image-only::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.34) 0%, transparent 42%);
+}
+
+/* Top scrim to protect nav legibility on bright images */
+.page-header--hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Title/subtitle text block */
+.page-header-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: min(64rem, calc(100% - 3rem));
+  padding: 3rem 5rem;
+  margin-left: 2rem;
+}
+
+.page-header-eyebrow {
+  width: max-content;
+  margin-bottom: 1.2rem;
+  padding-top: 0.45rem;
+  border-top: 5px solid var(--unm-high-noon);
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fffaf0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+/* =====================================================
+   CAPTION STRIPE
+   Describes what the image shows. Sits at the bottom
+   of the header with a gradient scrim behind it.
+   ===================================================== */
+
+.page-header-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 2rem 2rem 0.75rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.70) 0%, transparent 100%);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: right;
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PREV/NEXT ESSAY ARROWS
+   ===================================================== */
+
+.header-arrow {
+  position: absolute;
+  top: 1.25rem;
+  z-index: 20;
+  font-size: 1.15rem;
+  color: #fffaf0;
+  background: rgba(23, 20, 18, 0.34);
+  padding: 0.42rem 0.58rem;
+  border: 1px solid rgba(255, 250, 240, 0.5);
+  border-radius: 0;
+  text-decoration: none;
+  opacity: 0.72;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    opacity 0.2s;
+  line-height: 1;
+}
+
+.header-arrow-left  { left: 1.25rem; }
+.header-arrow-right { right: 1.25rem; }
+
+.header-arrow:hover {
+  background: var(--unm-cherry);
+  border-color: var(--unm-cherry);
+  color: #fffaf0;
+  opacity: 1;
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   LEGACY JUMBOTRON (essay-header.html / jumbotron.html)
+   Used by unm-base.html layout — predates the .page-header system.
+   ===================================================== */
+
+.xan-jumbotron {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.xan-jumbotron h1,
+.xan-jumbotron p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: right;
+}
+
+.xan-jumbotron h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+
+.page-header-stripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  text-align: right;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+
+/* =====================================================
+   GAP BELOW HEADER
+   ===================================================== */
+
+.page-header ~ .container {
+  margin-top: 2.5rem;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .page-header-content {
+    padding: 2rem 1.5rem;
+    margin-left: 0;
+  }
+
+  .header-arrow {
+    font-size: 1.6rem;
+    padding: 0.3em 0.5em;
+  }
+}

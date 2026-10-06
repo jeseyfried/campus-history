@@ -1,0 +1,26 @@
+{% capture img1_url %}
+{% include images/image-path.html image-path=include.image1 %}
+{% endcapture %}
+{% capture img2_url %}
+{% include images/image-path.html image-path=include.image2 %}
+{% endcapture %}
+{% assign generated_id = include.image1 | append: '-' | append: include.image2 | slugify %}
+{% if include.id %}
+  {% assign juxtapose_id = include.id %}
+{% else %}
+  {% assign juxtapose_id = generated_id | prepend: 'juxtapose-' %}
+{% endif %}
+
+<figure class="juxtapose-figure {{ include.class }}">
+  <div id="{{ juxtapose_id }}" class="juxtapose" data-startingposition="{{ include.starting-position | default: '50%' }}"
+    data-label="{{ include.data-label }}" data-credit="{{ include.data-credit }}" data-showlabels="false"
+    data-showcredits="false" data-animate="false">
+    <img src="{{ img1_url | strip }}" alt="{{ include.alt1 | default: '' }}">
+    <img src="{{ img2_url | strip }}" alt="{{ include.alt2 | default: '' }}">
+  </div>
+  {% if include.caption %}
+  <figcaption>
+    {{ include.caption | markdownify }}
+  </figcaption>
+  {% endif %}
+</figure>

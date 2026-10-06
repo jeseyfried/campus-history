@@ -1,0 +1,616 @@
+/* Typography styles - fonts imported in base.css */
+
+@media screen {
+
+/*****************************************************
+TYPOGRAPHY
+*****************************************************/
+
+html, body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+
+h1, h2, h3, h4, h5 {
+  /* Typography */
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+/* Heading color hierarchy - variety with restraint */
+h1 {
+  color: var(--text-h1);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+h2 {
+  color: var(--text-h2);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  padding-left: 0.8rem;
+  border-left: 0.42rem solid var(--unm-high-noon);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.08;
+}
+
+h2::after {
+  content: none;
+}
+
+h3 {
+  color: var(--text-h3);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-body);
+  font-size: clamp(1.18rem, 2.2vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h4 {
+  color: var(--text-h4);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+}
+
+h5 {
+  color: var(--text-h5);
+  margin-top: var(--spacing-xs);
+  margin-bottom: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h6 {
+  color: var(--text-body);
+}
+
+hr {
+  /* Display */
+  display: block;
+
+  /* Box Model */
+  height: 0;
+  margin: var(--spacing-lg) 0;
+  clear: both;
+
+  /* Visual */
+  border: 0;
+  border-top: 3px solid var(--accent-border);
+}
+
+p {
+  /* Box Model */
+  margin-bottom: var(--spacing-md);
+
+  /* Typography */
+  font-family: var(--font-serif);
+  font-size: 1.19rem;
+  line-height: 1.82;
+  text-align: left;
+}
+
+.page-wrap .container > p:first-of-type {
+  font-size: clamp(1.206rem, 1.8vw, 1.467rem);
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Reduce spacing between paragraphs and lists */
+p:has(+ ul),
+p:has(+ ol) {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Essay-specific paragraph types */
+
+/* Lead / intro paragraph — apply with {: .lead} in Kramdown after the opening paragraph */
+p.lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.28rem, 2.2vw, 1.62rem);
+  line-height: 1.65;
+  color: var(--ink);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-left: 8px solid var(--accent-primary);
+  background: color-mix(in srgb, var(--unm-high-noon) 12%, transparent);
+  text-align: left;
+}
+
+p.abstract {
+  border: 1px solid var(--rule);
+  border-top: 6px solid var(--unm-turquoise);
+  background-color: var(--bg-card);
+  padding: 1.5em;
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  margin: 3em 0 4em 0;
+  text-align: left;
+}
+
+p.author {
+  margin: 0.5em 0 0 0;
+  font-family: var(--font-body);
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--unm-cherry);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+ul, ol {
+  /* Box Model */
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  padding-left: 2rem;
+}
+
+/* Prevent font-size reduction from cascading into Bootstrap/UNM navs */
+.nav, nav ul, nav ol, .navbar ul, .navbar ol {
+  font-size: inherit;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a {
+  /* Typography */
+  text-decoration: none;
+  color: var(--accent-primary);
+
+  /* Visual */
+  border-bottom: 2px solid color-mix(in srgb, var(--accent-primary) 32%, transparent);
+}
+
+
+a:hover {
+  /* Typography */
+  color: var(--interactive-hover);
+  text-decoration: none;
+  border-bottom-color: var(--interactive-hover);
+}
+
+.container li {
+  /* Box Model */
+  margin: 0 0 var(--spacing-xs) 0;
+  padding: 0;
+  
+  /* Typography */
+  line-height: 1.7rem;
+}
+
+/*****************************************************
+TABLES
+*****************************************************/
+
+table {
+  /* Box Model */
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+
+  /* Visual */
+  border-collapse: collapse;
+}
+
+th,
+td {
+  /* Box Model */
+  padding: 0.6rem 1rem;
+
+  /* Typography */
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+th {
+  /* Typography */
+  font-weight: 800;
+  color: var(--text-h3);
+
+  /* Visual */
+  border-bottom: 2px solid color-mix(in srgb, var(--accent-primary) 25%, var(--bg-page));
+}
+
+td {
+  /* Visual */
+  border-bottom: 1px solid var(--bg-card);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+
+/*****************************************************
+CODE BLOCKS
+*****************************************************/
+
+/* Inline code (in paragraphs, lists, tables, headings) */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--text-body);
+  background-color: color-mix(in srgb, var(--bg-code) 70%, var(--bg-page));
+  border: 1px solid color-mix(in srgb, var(--accent-primary) 24%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 0.06em 0.3em;
+}
+
+/* Keep fenced/indented code blocks clean and unchanged */
+pre code,
+.highlight pre code {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.highlight {
+  /* Display */
+  overflow-x: auto;
+
+  /* Box Model */
+  margin: var(--spacing-sm) 0;
+  padding: var(--spacing-xs);
+
+  /* Visual */
+  background: var(--bg-code);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.highlight pre {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
+
+  /* Typography */
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-body);
+}
+
+
+/*****************************************************
+FOOTNOTE STYLING
+*****************************************************/
+
+/* Footnote reference buttons (superscript numbers) */
+.littlefoot__button {
+  /* Display & Positioning */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -0.22em;
+
+  /* Box Model */
+  width: auto;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.35rem;
+  margin: 0 0.12em;
+
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--unm-cherry);
+
+  /* Visual */
+  background: color-mix(in srgb, var(--paper) 88%, white);
+  border: 1px solid color-mix(in srgb, var(--unm-cherry) 38%, transparent);
+  border-radius: 999px;
+  box-shadow: none;
+  opacity: 1;
+
+  /* Interactivity */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.littlefoot__button:hover,
+.littlefoot__button:focus {
+  /* Typography */
+  color: var(--ink);
+
+  /* Visual */
+  background: color-mix(in srgb, var(--unm-high-noon) 32%, var(--paper));
+  border-color: var(--unm-sandia-sunset);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--unm-sandia-sunset) 22%, transparent);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Footnote popup styling */
+.littlefoot__popover {
+  /* Box Model */
+  max-width: 28rem;
+  padding: 0;
+  margin: 0.5rem 0;
+
+  /* Visual */
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.littlefoot__content {
+  /* Box Model */
+  padding: 1rem;
+
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.littlefoot__content p {
+  /* Box Model */
+  margin: 0 0 0.5rem 0;
+}
+
+.littlefoot__content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/*****************************************************
+BLOCKQUOTE
+*****************************************************/
+/* Native <blockquote> element — used via Markdown > syntax */
+blockquote {
+  /* Box Model */
+  max-width: 92%;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+
+  /* Typography */
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.55;
+  font-style: italic;
+  quotes: """ """ "'" "'";
+
+  /* Visual */
+  border-top: 3px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  border-left: 0;
+}
+
+
+
+/*****************************************************
+PULLQUOTES
+Editorial quote used in essays via aside.html and pullquote.html.
+*****************************************************/
+
+.pullquote {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-left: 0.85rem solid var(--unm-cherry);
+  color: var(--ink);
+  margin: var(--spacing-xl) 0;
+  padding: 1.2rem 1.45rem 1.25rem;
+  background: color-mix(in srgb, var(--unm-high-noon) 14%, var(--bg-page));
+}
+
+.pullquote p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.22;
+  text-align: left;
+}
+
+
+/*****************************************************
+BIBLIOGRAPHY DRAWER
+*****************************************************/
+
+.bibliography-block {
+  clear: both;
+  margin: var(--spacing-xl) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--bg-card) 84%, var(--bg-page));
+}
+
+.bibliography-block summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.95rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.bibliography-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.bibliography-block summary::after {
+  content: "+";
+  grid-column: 3;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--unm-cherry);
+}
+
+.bibliography-block[open] summary::after {
+  content: "-";
+}
+
+.bibliography-block__eyebrow {
+  display: block;
+  grid-column: 2;
+  justify-self: end;
+  width: max-content;
+  margin-bottom: 0;
+  padding-top: 0.35rem;
+  border-top: 4px solid var(--unm-high-noon);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--unm-cherry);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.bibliography-block__title {
+  display: block;
+  grid-column: 1;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--ink);
+}
+
+.bibliography-block__content {
+  padding: 0 0 var(--spacing-md);
+}
+
+.bibliography-block__content ul,
+.bibliography-block__content ol {
+  margin-bottom: 0;
+}
+
+.bibliography-block__content li,
+.bibliography-block__content p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+
+/*****************************************************
+ALERTS
+*****************************************************/
+
+.alert {
+  /* Box Model */
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 0;
+  border: 1px solid var(--hairline);
+  border-left: 6px solid transparent;
+
+  /* Typography */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.alert-heading {
+  /* Box Model */
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+
+  /* Typography */
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.alert-info {
+  background: color-mix(in srgb, var(--info) 12%, var(--bg-page));
+  border-left-color: var(--info);
+  color: var(--text-body);
+}
+
+.alert-warning {
+  background: color-mix(in srgb, var(--warning) 12%, var(--bg-page));
+  border-left-color: var(--warning);
+  color: var(--text-body);
+}
+
+.alert-danger {
+  background: color-mix(in srgb, var(--error) 12%, var(--bg-page));
+  border-left-color: var(--error);
+  color: var(--text-body);
+}
+
+.alert-success {
+  background: color-mix(in srgb, var(--success) 12%, var(--bg-page));
+  border-left-color: var(--success);
+  color: var(--text-body);
+}
+
+} /* end regular styles */
+
+/*****************************************************************************/
+/*
+/* SMALL SCREEN
+/*
+/*****************************************************************************/
+
+@media (max-width: 768px) {
+
+  /* Reduce base font size for mobile */
+  html, body {
+    font-size: 1rem;
+  }
+
+  /* Pullquotes fill full width on mobile */
+  .pullquote {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .pullquote p {
+    font-size: 1.25rem;
+  }
+
+  .bibliography-block summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .bibliography-block summary::after {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .bibliography-block__eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+
+  blockquote {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}

@@ -1,26 +1,22 @@
 ---
-title: LaGuna-DeVargas-Hall
+title: Laguna DeVargas Hall
 author: Brandon Rodriguez
-layout: unm-base
+layout: essay
 date: 2015-04-14
+popup-teaser: Laguna DeVargas Hall (LDV) is one of the most distinctive and more classical residence halls at UNM.
+card-description: Laguna DeVargas Hall (LDV) is one of the most distinctive and more classical residence halls at UNM.
+card-image: /essays/laguna-devargas-hall/images/LagunaDeVargas.jpg
 header-image: images/LagunaDeVargas.jpg
-header-title: DeVargas Hall
-header-height: 50vh
-background-position: 20px
+header-title: Laguna DeVargas Hall
+header-position: 0px
+category: Dormitory
 ---
-
-
-## The Ways Of DeVargas Hall
-
-
-{% include figure.html class="img-right" width="48%" caption="Laguna & DeVargas Halls. [Source](https://issuu.com/unmreslife/docs/housing_recruitment_brochure_2022-23_rev7_for_issu)" src="images/8c3ead16234e5425de1ca6fe0e829c9d.jpeg" %}
-
-
-
 
 Laguna DeVargas Hall (LDV) is one of the most distinctive and more classical residence halls at UNM. Having been built during the late 60s, construction for the dorm finished in 1969 and was praised for its unique and fresh design. Each suite accommodates up to six residents, providing a balance between privacy and community living. This suite-style design was introduced to provide a more modern and comfortable living space, with shared bathrooms and common areas that encourage social interaction. And depending on which room you get, you may even see a beautiful view of the Sandia Mountains standing proudly in the distance when on the 3rd floor!
 
-{% include juxtapose.html
+{% include images/figure.html class="img-center" width="100%" caption="Laguna & DeVargas Halls. [Source](https://issuu.com/unmreslife/docs/housing_recruitment_brochure_2022-23_rev7_for_issu)" image-path="images/8c3ead16234e5425de1ca6fe0e829c9d.jpeg" %}
+
+{% include images/juxtapose.html
 image1="images/Picsart_25-05-18_17-15-19-658.jpg"
 image2="images/Picsart_25-05-18_17-12-31-306.jpg"
 caption="Here can be seen two young gentlmen on the left walking across the DeVargas Courtyard in 1971. On the right, a current picture of the Hall, with the fountain now removed."
@@ -94,7 +90,7 @@ Within the Lugana Hall setup, you will find four sectors for DeVargas. All made 
 
 
 ## About LDV's lead architect
-{% include figure.html class="img-right" width="60%" caption="Mr. Ernest J. Kump. [Source](https://alchetron.com/Ernest-J-Kump)" src="images/ernest-j-kump-5071f3f4-9a13-4cce-8a25-63b9de414ff-resize-750.webp" %}
+{% include images/figure.html class="img-right" width="60%" caption="Mr. Ernest J. Kump. [Source](https://alchetron.com/Ernest-J-Kump)" image-path="images/ernest-j-kump-5071f3f4-9a13-4cce-8a25-63b9de414ff-resize-750.webp" %}
 
 Mr. Ernest J. Kump was born on December 29th, 1911 and passed away on November 4th, 1999. Throughout his life, Mr. Kump had accomplished many great architect projects across America. He has even been considered by The American Institute of Architects as "a pioneer of modular practices and systems concepts in architecture." [Source](https://alchetron.com/Ernest-J-Kump) During the 1960s especially, Ernest J. Kump played a major role for UNM, giving the University the '"Ultra-Modern"' look. Resulting in buildings like Laguna DeVargas and how their
 unique design helps give UNM a special place in the modern architect world. 
@@ -110,23 +106,13 @@ images/Picsart_25-05-18_18-53-38-381.jpg,
 images/Picsart_25-05-18_18-53-07-805.jpg" | split: ','
 %}
 
-{% include carousel.html
+{% include images/carousel.html
 images = images 
 %}
 [Source](https://unm.on.worldcat.org/search?search1=KW%3A%20&queryString=KW%3A%20%28Laguna%20DeVargas%29&clusterResults=true&stickyFacetsChecked=on&changedFacet=scope&groupVariantRecords=false&bookReviews=off)
 
 
-## 3D DeVargas soap bottle scan 
-<div class="sketchfab-embed-wrapper"> <iframe title="Meyers Soap Bottle" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/51017e01c9084e36a3fb98781a4c59f4/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/meyers-soap-bottle-51017e01c9084e36a3fb98781a4c59f4?utm_medium=embed&utm_campaign=share-popup&utm_content=51017e01c9084e36a3fb98781a4c59f4" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Meyers Soap Bottle </a> by <a href="https://sketchfab.com/Brodriguez777?utm_medium=embed&utm_campaign=share-popup&utm_content=51017e01c9084e36a3fb98781a4c59f4" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Brodriguez777 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=51017e01c9084e36a3fb98781a4c59f4" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-
-
-
-## Interview with the one and only!
-In the gathering for the ways of DeVargas, my team and I were able to spot and ask DeVargas some questions about himself along with quick facts. In my time spent with him, I collected the vibe that he was a very chill and down to Earth being...well, you kinda need to be down to Earth if you want to be a functional building. Please take a listen to this little snippet of the interview with DeVargas found here. 
-
-<audio controls src="DeVargas Interview (1).mp3"></audio>
-
-## Bibliography
+{% capture bibliography %}
 
 - Ernest J. Kump Alchetron, https://alchetron.com/Ernest-J-Kump
   
@@ -137,4 +123,5 @@ In the gathering for the ways of DeVargas, my team and I were able to spot and a
 
 
 - UNM.edu https://events.unm.edu/amenities/accommodations.html
-
+{% endcapture %}
+{% include typography/bibliography.html title="Bibliography" content=bibliography %}
